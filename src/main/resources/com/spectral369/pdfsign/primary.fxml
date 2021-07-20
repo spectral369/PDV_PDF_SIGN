@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="820.0" prefWidth="1025.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.spectral369.pdfsign.PrimaryController">
+    
+    <AnchorPane fx:id="root" minHeight="0.0" minWidth="0.0" prefHeight="819.0" prefWidth="1025.0">
+        <children>
+            <ButtonBar fx:id="bbar" layoutX="6.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="50.0" prefWidth="1025.0">
+                <buttons>
+                    <Button fx:id="settings" onAction="#onSettings"  contentDisplay="CENTER" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" text="Settings" underline="true" />
+                    <Button fx:id="botdec" mnemonicParsing="false" text="DetectBottomLocation" onAction="#onBottomLocDec" disable="true"  />
+                    <Button fx:id="topdec" mnemonicParsing="false" text="DetectTopLocation" onAction="#onTopLocDec" disable="true" />
+                    <Button id="load" fx:id="load" mnemonicParsing="false" onAction="#onLoad" text="Load PDF" />
+                </buttons>
+            </ButtonBar>
+            <ScrollPane fx:id="scrollPane" layoutX="10.399999618530273" layoutY="113.4000015258789" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+            <content>
+               <Canvas fx:id="display" height="761.0" onMouseDragged="#onMouseDragged" onMousePressed="#onMousePressed" onMouseReleased="#onMouseReleased" width="1018.0" />
+            </content>
+            </ScrollPane>
+        </children>
+    </AnchorPane>
+
+</VBox>
